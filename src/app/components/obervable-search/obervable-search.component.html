@@ -1,22 +1,25 @@
-<div class="row">
-  <div class="col-md-5 col-sm-5">
-    <div id="custom-search-input">
-      <div class="input-group col-md-12">
-        <input type="text" [(ngModel)]="searchText" class="form-control input-lg" placeholder="Observable Search" />
-        <span class="input-group-btn">
-          <button class="btn btn-info btn-lg glyphicon glyphicon-search" type="button" (click)="searchTodo()">
-          </button>
-        </span>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 col-sm-5">
+      <div id="custom-search-input">
+        <div class="input-group col-md-12">
+          <input type="text" [(ngModel)]="searchText" class="form-control input-lg" placeholder="Enter Todo" />
+          <span class="input-group-btn">
+            <button class="btn btn-info btn-lg glyphicon glyphicon-search" type="button" (click)="searchTodo()">
+            </button>
+          </span>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div class="row">
-  <ng-container *ngIf="result.length > 0">
-    <span>Search Result:</span>
-    <ol>
-      <li *ngFor="let element of result">{{element.todo}}</li>
-    </ol>
-  </ng-container>
-  <span *ngIf="(result.length == 0)">No Results Found.</span>
+  <br>
+  <div class="row">
+    <ng-container *ngIf="result.length > 0">
+      <span>Search Result:</span>
+      <ol>
+        <li *ngFor="let element of result">{{element.todo}}</li>
+      </ol>
+    </ng-container>
+    <span *ngIf="(result.length == 0)">No Results Found.</span>
+  </div>
 </div>

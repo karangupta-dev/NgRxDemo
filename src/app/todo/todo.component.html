@@ -1,12 +1,5 @@
 <div class="container">
   <div class="row">
-    <span>List in Todo Component:</span><br>
-    <ul>
-      <li *ngFor="let object of todoList">{{object.todo}}</li>
-    </ul>
-  </div>
-  <hr>
-  <div class="row">
     <add-todo [todoList]="todoList"></add-todo>
   </div>
 </div>

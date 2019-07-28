@@ -16,6 +16,10 @@ export class TodoComponent implements OnInit, OnDestroy {
     {
       "id": 2,
       "todo": "Water Plants"
+    },
+    {
+      "id": 3,
+      "todo": "Feed Pet"
     }
   ]
 
