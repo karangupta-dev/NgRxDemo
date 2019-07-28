@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 col-sm-5">
+      <div id="custom-search-input">
+        <div class="input-group col-md-12">
+          <input type="text" [(ngModel)]="todoText" class="form-control input-lg" placeholder="Add Todo" />
+          <span class="input-group-btn">
+            <button class="btn btn-info btn-lg glyphicon glyphicon-plus" type="button" (click)="addTodo()">
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <span>List in Add Todo Component:</span><br>
+    <ul>
+      <li *ngFor="let object of todoList">{{object.todo}}</li>
+    </ul>
+  </div>
+
+</div>
